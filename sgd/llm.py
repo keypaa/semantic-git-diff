@@ -1,6 +1,6 @@
 import ollama
 
-DEFAULT_MODEL = "qwen3:8b"
+DEFAULT_MODEL = "qwen2.5:3b"
 
 
 def query_llm(prompt: str, model: str = DEFAULT_MODEL, timeout: int = 120) -> str:

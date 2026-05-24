@@ -18,10 +18,10 @@ pip install semantic-git-diff
 
 Requires Python ≥ 3.10 and [Ollama](https://ollama.com) running locally.
 
-Pull a model:
+Pull a model (3B recommended for most machines, works on CPU):
 
 ```bash
-ollama pull qwen3:8b
+ollama pull qwen2.5:3b
 ```
 
 ---
@@ -56,7 +56,7 @@ sgd main..feature/auth --lang fr
 | Flag | Default | Description |
 |------|---------|-------------|
 | `--output` / `-o` | stdout | Write output to file |
-| `--model` / `-m` | `qwen3:8b` | Ollama model name |
+| `--model` / `-m` | `qwen2.5:3b` | Ollama model name |
 | `--lang` / `-l` | `en` | Output language |
 | `--format` / `-f` | `markdown` | `markdown` or `json` |
 | `--dry-run` | `false` | Show prompt + chunks without calling LLM |
@@ -109,7 +109,7 @@ Given this diff (migrating from sqlite3 to asyncpg, adding password hashing and 
      New: 52 chars
 ```
 
-### Actual output (with Qwen3-8B)
+### Actual output (with qwen2.5:3b)
 
 ```markdown
 ## Summary
@@ -171,7 +171,7 @@ stdout / file
 
 - Python ≥ 3.10
 - [Ollama](https://ollama.com) running locally
-- A model pulled (recommended: `qwen3:8b`, `llama3.2:3b`, or any instruct model)
+- A model pulled (recommended: `qwen2.5:3b`, `llama3.2:3b`, or any instruct model ≤ 4B)
 
 ---
 
