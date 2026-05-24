@@ -166,6 +166,8 @@ stdout / file
 - **LLM**: Single pass — all chunks in one prompt, no lossy summary-of-summaries
 - **Guard**: Warns and truncates when estimated tokens exceed 24k
 
+> **CPU users:** Large diffs (>~3000 tokens) may time out on CPU with bigger models. Use `--dry-run` to check the estimated token count first, or limit scope with `HEAD~1..HEAD`.
+
 ---
 
 ## Requirements
