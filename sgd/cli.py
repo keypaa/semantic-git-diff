@@ -35,7 +35,7 @@ def main(
         None, "--output", "-o", help="Write output to file instead of stdout"
     ),
     model: str = typer.Option(
-        "qwen2.5:3b", "--model", "-m", help="Ollama model name"
+        "qwen3:8b", "--model", "-m", help="Ollama model name"
     ),
     lang: str = typer.Option(
         "en", "--lang", "-l", help="Output language"
